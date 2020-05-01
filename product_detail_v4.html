@@ -37,6 +37,12 @@
 				price: 200,
 				categories: ['women', 'shirt']
 			})
+			
+			$('#add-to-cart').on('click', function() {
+				dataLayer.push({
+					event: 'Add To Cart'
+				})
+			});
 		</script>
 
 		<!-- Google Tag Manager -->
@@ -144,7 +150,7 @@
 									<p>&nbsp;</p>
 									<label>Qty:</label>
 									<input type="text" class="span1" placeholder="1">
-									<button class="btn btn-inverse" type="submit">Add to cart</button>
+									<div id="add-to-cart" class="btn btn-inverse">Add to cart</div>
 								</form>
 							</div>							
 						</div>
@@ -386,6 +392,13 @@
 				$('#myCarousel-2').carousel({
                     interval: 2500
                 });								
+			});
+		</script>
+		<script>
+			$('#add-to-cart').on('click', function() {
+				dataLayer.push({
+					event: 'Add To Cart'
+				})
 			});
 		</script>
     </body>
