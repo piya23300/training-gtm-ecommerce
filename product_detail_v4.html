@@ -397,7 +397,10 @@
 		<script>
 			$('#add-to-cart').on('click', function() {
 				dataLayer.push({
-					event: 'Add To Cart'
+					event: 'Add To Cart',
+					cart: {
+						quantity: 2
+					}
 				})
 			});
 		</script>
